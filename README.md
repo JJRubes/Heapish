@@ -10,10 +10,15 @@ I have managed to capture either a feeling of "where it fits" algorithm
 nor have I made a language that seems compelling.
 
 ## How It Works
-In heapish all of the commands are in and operate on an array of bits,
-which in the code is called the "heap". I do not have a canonical set of
-instructions, in the code there are 2 listed. However, there are some
-features that the instruction sets share. 
+In heapish all of the commands are in and operate on an infinite array
+of bits, which in the code is called the "heap". I do not have a
+canonical set of instructions, in the code there are 2 listed. However,
+there are some features that the instruction sets share. 
+- Nop should be represented with 0
+- Any instruction that adds instructions to the heap should use the heap
+  push
+- Jumps should be relative to the command or to the start of the heap
+- The instruction set should not allow ambiguous heaps
 
 ### The 2 Instruction Sets
 Command Name | Value | What it Does
