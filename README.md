@@ -14,7 +14,7 @@ In heapish all of the commands are in and operate on an infinite array
 of bits, which in the code is called the "heap". I do not have a
 canonical set of instructions, in the code there are 2 listed. However,
 there are some features that the instruction sets share. 
-- Nop should be represented with 0
+- Nop should be represented with `0`
 - Any instruction that adds instructions to the heap should use the heap
   push
 - Jumps should be relative to the command or to the start of the heap
@@ -23,22 +23,22 @@ there are some features that the instruction sets share.
 ### The 2 Instruction Sets
 Command Name | Value | What it Does
 :--- | ---: | :---
-nop | 0 | No-op
-jmp | 10 | Jumps to the start of the array.
-del | 110 | Replaces the next instruction with nops
-psh | 111 | Pushes the next instruction 3 times, one after the other.
+nop | `0` | No-op
+jmp | `10` | Jumps to the start of the array.
+del | `110` | Replaces the next instruction with nops
+psh | `111` | Pushes the next instruction 3 times, one after the other.
 
 Command Name | Value | What it Does
 :--- | ---: | :---
-nop | 0 | No-op
-jmps | 100 | Jumps to the start of the array.
-jmpn | 101 | Jumps over the next instruction.
-del | 110 | Replaces the next instruction with nops
-psh1 | 1110 | Pushes the next instruction.
-psh2 | 11110 | Pushes the next instruction 2 times in a contiguous block.
-psh3 | 111110 | Pushes the next instruction 3 times in a contiguous block.
-psh4 | 1111110 | Pushes the next instruction 4 times in a contiguous block.
-psh5 | 1111111 | Pushes the next instruction 5 times in a contiguous block.
+nop | `0` | No-op
+jmps | `100` | Jumps to the start of the array.
+jmpn | `101` | Jumps over the next instruction.
+del | `110` | Replaces the next instruction with nops
+psh1 | `1110` | Pushes the next instruction.
+psh2 | `11110` | Pushes the next instruction 2 times in a contiguous block.
+psh3 | `111110` | Pushes the next instruction 3 times in a contiguous block.
+psh4 | `1111110` | Pushes the next instruction 4 times in a contiguous block.
+psh5 | `1111111` | Pushes the next instruction 5 times in a contiguous block.
 
 ## Other Possibilities
 I had more ideas for areas to explore but I do not feel like continuing
